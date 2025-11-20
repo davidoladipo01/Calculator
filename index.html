@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" class="display" disabled id="result">
+        <div class="keys" style="box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);">
+            <button class="operator-btn2" onclick="document.getElementById('result').value=''">C</button>
+            <button class="operator-btn2" onclick="document.getElementById('result').value+=''">±</button>
+            <button class="operator-btn2" onclick="document.getElementById('result').value+='%'">%</button>
+            <button class="operator-btn" onclick="document.getElementById('result').value+='/'">÷</button>
+            <button onclick="document.getElementById('result').value+=7">7</button>
+            <button onclick="document.getElementById('result').value+=8">8</button>
+            <button onclick="document.getElementById('result').value+=9">9</button>
+            <button class="operator-btn" onclick="document.getElementById('result').value+='*'">×</button>
+            <button onclick="document.getElementById('result').value+=4">4</button>
+            <button onclick="document.getElementById('result').value+=5">5</button>
+            <button onclick="document.getElementById('result').value+=6">6</button>
+            <button class="operator-btn" style="align-items: center; display: flex; justify-content: center;"
+                onclick="document.getElementById('result').value+='-'">-</button>
+            <button onclick="document.getElementById('result').value+=1">1</button>
+            <button onclick="document.getElementById('result').value+=2">2</button>
+            <button onclick="document.getElementById('result').value+=3">3</button>
+            <button class="operator-btn" onclick="document.getElementById('result').value+='+'">+</button>
+            <button style="grid-column: span 2; width: 220px; text-align: start; padding-left: 20px;"
+                onclick="document.getElementById('result').value+=0">0</button>
+            <button onclick="document.getElementById('result').value+='.'">.</button>
+            <button class="operator-btn" onclick="calc()">=</button>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        function calc() {
+            // console.log('hello')
+            let answer = eval(result.value)
+            console.log(answer)
+            document.getElementById('result').value = answer
+        }
+
+
+    </script>
+</body>
+
+</html>
